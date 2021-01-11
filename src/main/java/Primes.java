@@ -1,16 +1,13 @@
 public class Primes {
     public static int countFactors(int n){
         int factors = 0;
-        for(int i = 1; i <= 8; i++){
-          if(n%i==0 && i*i !=n){
-            factors += 2;
-          }else if(i*i==n){
-            factors++;
-          }
-        System.out.println(factors);
-        }
-        return factors;
-      
+    for (int i = 1; i <= n; ++i) {
+      if (n % i == 0) {
+        factors++;
+      }
+    }
+    System.out.println(factors);
+      return factors;
     }
 
     public static boolean isPrime(int n){
