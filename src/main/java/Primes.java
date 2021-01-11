@@ -11,10 +11,10 @@ public class Primes {
     }
 
     public static boolean isPrime(int n){
-        int factors = countFactors(n);
         boolean prime = true;
-        for(int i = 1; i <= factors; i++){
-          if(i%n==0){
+        int max = (int)Math.sqrt(n);
+        for(int i = 2; i<=max; i++){
+          if(n%i == 0){
             prime = false;
           }
         }
@@ -23,8 +23,15 @@ public class Primes {
     }
 
     public static int countPrimes(int n){
+
         int numPrimes = 0;
-        
-        return numPrimes;
+        for(int i = 1; i<=n; i++){
+          if(n%i == 0){
+            numPrimes++;
+          }
+        }
+
+        System.out.print(numPrimes+1);      
+          return numPrimes;
     }
 }
